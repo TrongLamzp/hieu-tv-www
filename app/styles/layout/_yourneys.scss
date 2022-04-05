@@ -1,0 +1,17 @@
+.yourneys {
+    border-bottom: 1px solid #ccc;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 5.5rem;
+        padding-bottom: 5.5rem;
+    }
+    &-video {
+        width: calc(50% - 4rem);
+        &-img {
+            border-radius: 1rem;
+            min-height: 35rem;
+        }
+    }
+}

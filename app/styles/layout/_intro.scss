@@ -1,0 +1,27 @@
+.intro-container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.intro {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    &-heading3 {
+        display: block;
+        font-family: $primary-font;
+        font-size: 3.2rem;
+        line-height: 5.1rem;
+        color: $heading-color;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    &-caption {
+        display: block;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        line-height: 2.9rem;
+    }
+}

@@ -1,0 +1,13 @@
+mixin liItem(title = "Trang chủ", link = "#")
+    li.header-list-item 
+        a.header-list-link(href= link)=title
+
+mixin btnRadius50(href = '#', content)
+    a.link(href= href)= content
+
+mixin descLeft(icon = 'XD', title = 'title', text = 'text', more = 'Tìm hiểu thêm')
+    .desc
+        h4.desc-img= icon
+        h3.desc-heading3= title
+        p.desc-text= text
+        a.desc-more= more
