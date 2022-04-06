@@ -48,17 +48,16 @@ function debounceFn(func, wait, imediate) {
     };
 
 }
-// //const header = document.querySelector('.header');
-// const headerHeight = header && header.offsetHeight;
-// window.addEventListener('scroll', debounceFn(fixedCroll, 50));
-// function fixedCroll(e) {
-//     const scrollY = window.pageYOffset;
-//     if(scrollY >= headerHeight) {
-//         header && header.classList.add('is-fixed');
-//         document.body.style.paddingTop = `${headerHeight}px`;
-//     }else {
-//         header.classList.remove('is-fixed');
-//         document.body.style.paddingTop = 0;
-//     }
-// }
+
+//!* toggle menu
+
+const faBars = document.querySelector('.header-toggle');
+const menu = document.querySelector('.header-list');
+faBars.addEventListener('click', handleToggle);
+function handleToggle(e) {
+    e.target.classList.toggle('fa-times');
+    e.target.classList.toggle('fa-bars');
+    menu.classList.toggle('is-expand');
+
+}
 
