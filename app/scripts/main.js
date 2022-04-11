@@ -17,10 +17,7 @@
 // });
 const header = document.querySelector('.header');
 const headerHeight = header && header.offsetHeight;
-console.log(header);
-console.log(headerHeight);
-console.log(scrollY);
-window.addEventListener('scroll', debounceFn(scrollHeader, 50));
+window.addEventListener('scroll', debounceFn(scrollHeader, 10));
 function scrollHeader(e) {
     const scrollY = window.pageYOffset;
     if(scrollY >= headerHeight) {
@@ -50,14 +47,30 @@ function debounceFn(func, wait, imediate) {
 }
 
 //!* toggle menu
+const headerIcon = document.querySelector('.header-content');
+const iconMenu = document.querySelector('.header-toggle');
 
-const faBars = document.querySelector('.header-toggle');
-const menu = document.querySelector('.header-list');
-faBars.addEventListener('click', handleToggle);
-function handleToggle(e) {
-    e.target.classList.toggle('fa-times');
-    e.target.classList.toggle('fa-bars');
-    menu.classList.toggle('is-expand');
+headerIcon.addEventListener('click', handleHeader);
 
+function handleHeader(e) {
+    const content = e.target.nextElementSibling;
+    content.classList.toggle('is-show');
+    content.style.height = `${content.scrollHeight}px`;
+    if(!content.classList.contains('is-show')) {
+        content.style.height = "0px";
+    }
+    
+    iconMenu.classList.toggle('fa-bars');
+    iconMenu.classList.toggle('fa-skull');
+    
 }
+//! document remove class
+// document.addEventListener('click', documentRemove);
+// function documentRemove(e) {
+//     const headerBottom = document.querySelector('.header-bottom');
+//     console.log(headerBottom);
+//  if(!headerIcon.contains(e.target) && !e.target.matches(".header-toggle")) {
+//      headerBottom.classList.remove("is-show");
+//  }
+// }
 

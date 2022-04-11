@@ -1,5 +1,9 @@
 a {
     text-decoration: none;
+    color: $heading-color;
+}
+a:active {
+    color: thistle;
 }
 
 img {
